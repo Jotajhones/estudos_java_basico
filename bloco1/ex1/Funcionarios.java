@@ -1,11 +1,10 @@
-package estudos_java_basico.ex1;
 
-public abstract class Funcionario {
+public abstract class Funcionarios {
     
     String nome;
     Double salarioBase;
 
-    public Funcionario(String nome, Double salarioBase) {
+    public Funcionarios(String nome, Double salarioBase) {
         this.nome = nome;
         this.salarioBase = salarioBase; 
     }

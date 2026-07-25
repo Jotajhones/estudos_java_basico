@@ -1,6 +1,5 @@
-package estudos_java_basico.ex1;
 
-public class Desenvolvedor extends Funcionario {
+public class Desenvolvedor extends Funcionarios {
 
     public Desenvolvedor(String nome, Double salarioBase) {
         super(nome, salarioBase);
@@ -21,7 +20,7 @@ public class Desenvolvedor extends Funcionario {
     public boolean equals(Object obj) {
 
         String nomeLocal = this.nome.toLowerCase();
-        String nomeFunc = ((Funcionario) obj).getNome().toLowerCase();
+        String nomeFunc = ((Funcionarios) obj).getNome().toLowerCase();
 
         if(nomeLocal.equals(nomeFunc)) {
             return true;

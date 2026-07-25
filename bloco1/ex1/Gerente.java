@@ -1,6 +1,5 @@
-package estudos_java_basico.ex1;
 
-public class Gerente extends Funcionario implements Autenticavel {
+public class Gerente extends Funcionarios implements Autenticavel {
 
     public Gerente(String nome, Double salarioBase) {
         super(nome, salarioBase);
@@ -8,7 +7,8 @@ public class Gerente extends Funcionario implements Autenticavel {
 
     @Override
     public Double calcularSalario() {
-        return super.calcularSalario() + 2000.0;
+        Double salario = super.calcularSalario();
+        return salario + 2000.0;
     }
 
     @Override

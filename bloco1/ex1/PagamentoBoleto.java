@@ -1,4 +1,3 @@
-package estudos_java_basico.ex1;
 
 public class PagamentoBoleto implements MetodoPagamento{
 

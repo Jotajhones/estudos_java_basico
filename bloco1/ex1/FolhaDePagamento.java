@@ -1,11 +1,10 @@
-package estudos_java_basico.ex1;
 
 import java.util.List;
 
 public class FolhaDePagamento {
 
     public static void main(String[] args) {
-        List<Funcionario> funcionarios = List.of(
+        List<Funcionarios> funcionarios = List.of(
                 new Desenvolvedor("Alice", 5000.0),
                 new Desenvolvedor("Bob", 4500.0),
                 new Gerente("Carlos", 8000.0),
@@ -15,7 +14,7 @@ public class FolhaDePagamento {
         double custoTotalFolha = 0.0;
 
         System.out.println();
-        for (Funcionario funcionario : funcionarios) {
+        for (Funcionarios funcionario : funcionarios) {
             double salarioFinal = funcionario.calcularSalario();
             custoTotalFolha += salarioFinal;
 
@@ -43,13 +42,13 @@ public class FolhaDePagamento {
         }
         System.out.println();
 
-        RelatorioFinanceiro<Funcionario> rel = new RelatorioFinanceiro<>(funcionarios);
+        RelatorioFinanceiro<Funcionarios> rel = new RelatorioFinanceiro<>(funcionarios);
         System.out.println(rel.salvar());
         rel.imprimir();
 
-        List<Funcionario> listaSalva = rel.getFuncionarios();
+        List<Funcionarios> listaSalva = rel.getFuncionarios();
         System.out.println("Mensagem para os Devs!");
-        for (Funcionario func : listaSalva) {
+        for (Funcionarios func : listaSalva) {
 
             if (func instanceof Desenvolvedor) {
                 System.out.printf("%s, não esqueça de fazer o commit do seu código hoje! \n", func.getNome());

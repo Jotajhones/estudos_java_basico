@@ -1,9 +1,8 @@
-package estudos_java_basico.ex1;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RelatorioFinanceiro<E extends Funcionario> implements Salvavel, Imprimivel {
+public class RelatorioFinanceiro<E extends Funcionarios> implements Salvavel, Imprimivel {
 
     private List<E> lista;
     private List<E> listaSalva;

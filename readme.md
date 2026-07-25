@@ -1,4 +1,4 @@
-# ☕ Fundamentos de Java: Programação Orientada a Objetos 
+# Fundamentos de Java: Programação Orientada a Objetos 
 
 > **Aviso:** Este projeto foi criado exclusivamente para fins de estudo, prática e documentação de aprendizado.
 
