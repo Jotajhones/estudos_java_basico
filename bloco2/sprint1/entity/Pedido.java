@@ -16,4 +16,5 @@ public class Pedido {
     public Double getValorTotal() {
         return valorTotal;
     }
+
 }

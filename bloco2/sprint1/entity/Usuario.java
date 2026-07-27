@@ -16,6 +16,10 @@ public class Usuario {
         return nome;
     }
 
+    public int getIdade() {
+        return idade;
+    }
+    
     public boolean getStatus() {
         return statusAtivo;
     }
