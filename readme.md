@@ -1,42 +1,55 @@
-# Fundamentos de Java: Programação Orientada a Objetos 
+# Java: Programação Orientada a Objetos e Design Patterns
 
-> **Aviso:** Este projeto foi criado exclusivamente para fins de estudo, prática e documentação de aprendizado.
+> **Aviso:** Este repositório é exclusivo para estudos, prática e documentação de aprendizado em Java. O foco é a consolidação de conceitos avançados de orientação a objetos, arquitetura e padrões de projeto que compõem a base de frameworks robustos corporativos, como o Spring Boot.
 
 ## Sobre o Projeto
 
-Este repositório faz parte de um roadmap pessoal de nivelamento e aprofundamento técnico em Java. Após experiências práticas aceleradas no desenvolvimento de sistemas full-stack sob demanda e participações em hackathons e desafios de inovação, o objetivo deste repositório é dar um passo atrás para consolidar os alicerces da linguagem. 
-
-Dominar perfeitamente a Orientação a Objetos é a etapa preparatória para compreender a fundo a arquitetura, a injeção de dependências e os bastidores de frameworks robustos como o Spring Boot.
-
-## O Que Foi Estudado
-
-Os exercícios contidos aqui simulam regras de negócio reais para fixar conceitos essenciais de POO:
-
-*   **Herança e Polimorfismo:** Reutilização de código, uso da palavra-chave `super` e mudança de comportamento de objetos em tempo de execução.
-*   **Classes Abstratas e Interfaces:** Criação de contratos estruturais, herança múltipla de tipos e segregação de responsabilidades.
-*   **Generics (`<E>`):** Garantia de segurança de tipos em tempo de compilação durante a manipulação de coleções.
-*   **Sobrescrita da Classe `Object`:** Implementação customizada de `toString()` e regras de igualdade com `equals()`.
-*   **Operadores de Tipo:** Uso do `instanceof` para filtragem de objetos em memória.
-*   **Introdução a Design Patterns:** Aplicação do padrão *Strategy* para processamento de pagamentos.
+O repositório documenta a evolução técnica em Java, focando em estruturação de software, injeção de dependências, inversão de controle e boas práticas. O projeto está estruturado em dois blocos principais que refletem a progressão da complexidade arquitetural.
 
 ---
 
-## Lista de Exercícios Resolvidos
+## Estrutura do Repositório
 
-O projeto está dividido em três blocos de complexidade progressiva:
+### Bloco 1: Fundamentos de POO e Contratos
 
-### Bloco 1: Herança, Superclasses e Classes Abstratas 
-1. **Herança e uso do `super`:** Criação da classe base `Funcionario` e subclasses `Desenvolvedor` e `Gerente`, aplicando bônus salariais específicos.
-2. **Classes Abstratas:** Transformação de `Funcionario` em classe abstrata com implementação obrigatória do método `obterCargo()`.
-3. **Polimorfismo e ArrayLists:** Construção de uma `FolhaDePagamento` que itera sobre uma lista polimórfica de funcionários para calcular o custo total da folha da empresa.
+Este bloco contém a primeira lista de exercícios, focada nos pilares da Orientação a Objetos, criação de contratos rígidos e polimorfismo.
 
-### Bloco 2: Interfaces e Contratos
-4. **Criando Interfaces:** Implementação da interface `Autenticavel` para gerentes e clientes, separando o contrato de autenticação da hierarquia de funcionários.
-5. **Coleções de Interfaces (Desacoplamento):** Simulação de um sistema de login que itera sobre uma lista de objetos `Autenticavel` de origens diferentes.
-6. **Herança Múltipla de Tipos:** Criação das interfaces `Imprimivel` e `Salvavel`, implementadas conjuntamente em uma classe `RelatorioFinanceiro` usando Generics.
+* **`bloco1/ex1/` (Exercícios 1 ao 9):**
+* **Herança e Polimorfismo:** Classes base (`Funcionario`), subclasses (`Desenvolvedor`, `Gerente`) e abstração.
+* **Interfaces e Contratos:** Separação de responsabilidades com `Autenticavel`, `Imprimivel` e `Salvavel`.
+* **Generics:** Implementações seguras de tipo em tempo de compilação.
+* **Padrão Strategy Base:** Interface `MetodoPagamento` com estratégias concretas (`PagamentoPix`, `PagamentoCartao`, `PagamentoBoleto`).
+* **Sobrescrita de `Object`:** Customização de `toString()` e `equals()`.
 
-### Bloco 3: Operações Avançadas com Coleções e POO
-7. **Filtragem com `instanceof`:** Iteração na folha de pagamento para disparar avisos exclusivos apenas para instâncias da classe `Desenvolvedor`.
-8. **Padrão Strategy com Interfaces:** Criação da interface `MetodoPagamento` e suas estratégias concretas (`PagamentoPix`, `PagamentoCartao`, `PagamentoBoleto`) processadas dinamicamente em um laço.
-9. **Sobrescrita de `toString` e `equals`:** Customização da exibição em tela dos dados do `Desenvolvedor` e alteração da regra de igualdade para comparar instâncias baseadas estritamente no nome.
-10. **Desafio Final (Carrinho de Compras Polimórfico):** Criação de um carrinho contendo uma classe abstrata `Produto` e a interface `Tributavel`. A lógica calcula impostos adicionais de 15% apenas para produtos Eletrônicos, isentando os Livros, e exibe o balanço financeiro final.
+
+* **`bloco1/ex10/` (Desafio Final do Bloco 1):**
+* **Carrinho de Compras Polimórfico:** Sistema de tributação dinâmico utilizando a interface `Tributavel` e a classe abstrata `Produto` (`Eletronico`, `Livro`), processando impostos diferentes por tipo de objeto.
+
+---
+
+### Bloco 2: Recursos Modernos, Tratamento de Erros e Design Patterns
+
+Este bloco consolida a segunda lista de estudos, dividida em três Sprints arquiteturais com foco em recursos modernos do Java e padrões de projeto essenciais.
+
+* **`bloco2/sprint1/` (Streams API e Lambdas):**
+* Abordagem funcional no Java (similar ao ecossistema JavaScript).
+* Operações de filtragem e transformação (`filter`, `map`).
+* Ordenação e limitação de coleções (`sorted`, `limit`).
+* Agrupamento de dados complexos (`Collectors.groupingBy`).
+* Redução e validações booleanas em massa (`reduce`, `anyMatch`, `allMatch`).
+* *Classes envolvidas:* `Usuario`, `Produto`, `Funcionario`, `Pedido`, `Transacao` e seus respectivos *Services*.
+
+
+* **`bloco2/sprint2/` (Tratamento Avançado de Exceções):**
+* Criação de exceções customizadas para regras de negócio (`SaldoInsuficienteException`, `EntidadeNaoEncontradaException`).
+* Padrão *Resource Not Found* integrado à Streams API com `.orElseThrow()`.
+* Gerenciamento autônomo de memória com `try-with-resources` e a interface `AutoCloseable` (`ConexaoDummy`).
+* Propagação de exceções simulando arquitetura em camadas (`Controller`, `Service`, `Repository`).
+
+
+* **`bloco2/sprint3/` (Design Patterns Corporativos):**
+* **Singleton (`ConfiguracaoBancoDados`):** Controle estrito de instância na memória (Thread-safe).
+* **Factory Method (`NotificacaoFactory`):** Criação dinâmica e terceirizada de instâncias baseadas em parâmetros externos.
+* **Strategy Avançado (`Carrinho`, `CalculadoraFrete`):** Eliminação de blocos condicionais através da injeção dinâmica de estratégias de frete em tempo de execução.
+* **Builder (`UsuarioPayload`, `UsuarioBuilder`):** Construção de objetos complexos e payloads de APIs via encadeamento de métodos (Method Chaining), evitando construtores verbosos.
+* **Observer (`GerenciadorEventos`, `OuvinteNovoUsuario`):** Implementação do padrão Publisher/Subscriber para processamento assíncrono de eventos, simulando o comportamento nativo de *listeners* do Spring Framework.
